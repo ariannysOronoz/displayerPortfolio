@@ -1,0 +1,39 @@
+.sidebar-menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  height: 300%; /* Considerar ajustar la altura si es necesario */
+  width: 8%; /* Ajustar según el diseño deseado */
+  color: inherit; /* Usa el color de texto ya definido */
+  background-color: black; /* Fondo negro para el menú */
+}
+
+.menu-items-list {
+  list-style-type: none; /* Quita los bullets */
+  padding: 0; /* Quita el padding predeterminado */
+  margin: 0; /* Quita el margen predeterminado */
+}
+
+.menu-item {
+  margin-bottom: 10px; /* Espaciado entre los items */
+}
+
+
+.menu-item a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  color: white; /* Cambia el color de los enlaces si es necesario */
+  display: block; /* Hace que el enlace ocupe todo el área del item */
+  padding: 10px; /* Añade espacio alrededor del enlace para mejor interacción */
+  transition: background-color 0.3s ease; /* Animación suave al hover */
+}
+
+.menu-item a:hover {
+  background-color: #333; /* Cambia el fondo al pasar el mouse */
+  color: #fff; /* Asegura que el color del texto se mantenga visible */
+}
+.menu-card-title a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  color: inherit; /* Mantiene el color de texto definido (en este caso, negro) */
+}
+

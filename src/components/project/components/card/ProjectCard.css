@@ -1,0 +1,31 @@
+.project-card {
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+}
+
+.project-card-image {
+    width: 100%;
+    height: auto;
+}
+
+.project-card-content {
+    padding: 16px;
+}
+
+.project-card-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+}
+
+.project-card-description {
+    font-size: 14px;
+    color: #606060;
+}

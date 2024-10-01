@@ -1,0 +1,59 @@
+.project-info-row {
+    height: 100px; 
+    width: 280px; 
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-start; 
+    align-items: center; 
+    background-color: #181818; 
+    border-radius: 8px; 
+    padding: 4px;
+    margin: 4px 0; 
+}
+
+.folder-image {
+    height: 100px; 
+    width: 150px;
+    overflow: hidden; 
+    border-radius: 4px; 
+    position: relative; 
+    background-color: #000;
+    margin-right: 10px;
+}
+
+.horizontal-information {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1; /* Permite que esta sección ocupe el espacio restante */
+}
+
+/* Ajustes para que el tamaño del contenedor se ajuste al texto */
+.folder-title,
+.folder-description,
+.folder-footer {
+    display: inline-block; /* Permite que el contenedor se ajuste al contenido */
+    width: auto; /* Ancho automático basado en el contenido */
+    margin: 0; /* Elimina cualquier margen extra */
+    padding: 0; /* Elimina el padding extra */
+}
+
+.folder-description p {
+    font-size: 12px; /* Ajusta el tamaño de la fuente de la descripción */
+    margin: 0; /* Elimina márgenes del párrafo */
+    padding: 0; /* Elimina padding */
+}
+
+.folder-footer .project-link {
+    font-size: 10px; /* Ajusta el tamaño de la fuente del enlace */
+    margin: 0; /* Elimina márgenes del enlace */
+    padding: 0; /* Elimina cualquier padding */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: #3498db; /* Cambia el color del enlace si lo deseas */
+}
+
+.folder-footer .project-link:hover {
+    text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+}
+

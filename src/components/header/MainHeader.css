@@ -1,0 +1,27 @@
+/* Estilos por defecto (para pantallas más grandes) */
+.Main-header-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5%; /* Ajusta el padding en porcentaje */
+    height: 5%; /* Ajusta la altura a un porcentaje de la altura del elemento padre */
+    width: 100%; 
+    background-color: black;
+    color: white;
+}
+
+/* Estilos para pantallas de 768px o menos */
+@media (max-width: 768px) {
+    .Main-header-container {
+        flex-direction: column; /* Cambia la dirección a columna en pantallas más pequeñas */
+        padding: 2%; /* Ajusta el padding en porcentaje */
+    }
+}
+
+.header-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ajusta la altura a un porcentaje de la altura del elemento padre */
+    width: 100%;
+    padding: 0%; /* Asegúrate de que el padding sea adecuado */
+}

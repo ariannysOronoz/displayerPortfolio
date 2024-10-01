@@ -1,0 +1,51 @@
+.menu-card {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    background-color: black;
+    margin:1%;
+}
+
+.menu-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95%;
+    width: 95%;
+    margin: 1%; /* Removes default margin from <h2> for better alignment */
+}
+
+.menu-card-image {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    background-color: white;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.menu-card-title{
+    display: flex;
+    height: 30%;
+    width: 100%;
+    margin: 1%; /* Espacio entre los elementos */
+    background-color: white;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    color: black; /* Garante que o texto seja visível */
+    text-align: center; /* Centraliza o texto */
+    font-size: 1.2em ;
+   
+}
+.menu-card-title a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: inherit; /* Mantiene el color de texto definido (en este caso, negro) */
+}
+
+.menu-card-title a:hover {
+    text-decoration: none; /* También elimina el subrayado en el hover */
+}

@@ -1,0 +1,41 @@
+/* Controls the size and layout of the main header container */
+.header-container { 
+  display: flex;
+  flex-direction: row;
+  height: 70%; /* Adjusts height to a percentage of the parent element's height */
+  width: 97%;
+}
+
+/* Controls the layout and style of the title wrapper */
+.title-wrapper {
+  display: flex;
+  align-items: center; /* Centers the title vertically within the wrapper */
+  justify-content: left; 
+  width: 30%; /* Adjusts the width of the title container to 30% of the header container's width */
+}
+
+/* Controls the style of the header title */
+.header-title {
+  margin: 0; /* Removes default margin from <h2> for better alignment */
+  font-size: 1em; /* Adjusts font size for the title */
+}
+
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+  .header-container { 
+    flex-direction: column; /* Changes direction to column for mobile view */
+    height: auto; /* Adjust height to auto for mobile view */
+    width: 100%; /* Adjust width to full width */
+  }
+
+  .title-wrapper {
+    width: 100%; /* Make title wrapper take full width */
+    justify-content: center; /* Center the title horizontally */
+  }
+  
+  .header-title {
+    text-align: center; /* Center the title text */
+  }
+}
+

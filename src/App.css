@@ -1,0 +1,21 @@
+.App {
+  display:flex;
+  flex-direction: column;
+  height: 100vh; /* Garante que .App ocupe toda a altura da viewport */
+  width: 100vw;  /* Garante que .App ocupe toda a largura da viewport */
+}
+.app-main-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: left ;
+  padding: 0%; /* Ajuste o padding em porcentagem */
+}
+
+@media (max-width: 768px) {
+  .app-main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: left ;
+    padding: 0%; /* Ajuste o padding em porcentagem */
+  }
+}
