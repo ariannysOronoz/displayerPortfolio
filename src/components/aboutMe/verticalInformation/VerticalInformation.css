@@ -1,8 +1,8 @@
-.VerticalInformation{
+.VerticalInformation-folder-container{
     height: 300px;
     width: 300px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center; /* Centra horizontalmente */
     align-items: center;     /* Centra verticalmente */
     background-color: black;

@@ -6,7 +6,7 @@ import ProjectPageDetails from "./components/project/pages/detailsPage/ProjectDe
 import MainMenu from "./components/menu/MainMenu";
 import MainHeader from "./components/header/MainHeader";
 import VerticalLink from "./components/contact/VerticalLink";
-import VerticalInformation from "./components/aboutMe/verticalInformation/VerticalInformation";
+import UserProfileDetails from './components/aboutMe/pages/ProfileDetails/UserProfileDetails';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           <MainMenu />
           <Routes>
             <Route path="/" element={<ProjectListPage />} />
-            <Route path="/sobre mi" element={<VerticalInformation />} />
+            <Route path="/sobre mi" element={<UserProfileDetails />} />
             <Route path="/contacto" element={<VerticalLink />} />
             <Route path="/details/:id" element={<ProjectPageDetails />} />
           </Routes>
