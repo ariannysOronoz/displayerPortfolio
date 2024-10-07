@@ -1,24 +1,36 @@
-.VerticalLink-folder-container{
-    height: 300px;
-    width: 300px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center;     /* Centra verticalmente */
-    background-color: black;
-}
-.VerticalLink-folder-item {
+.VerticalLink-folder-container {
     height: 200px;
     width: 200px;
     display: flex;
+    flex-direction: column;  
+    justify-content: center; 
+    align-items: center;  
+    margin: 20px; 
+    text-decoration: none;
+    background-color: black;
+}
+
+.VerticalLink-folder-item {
+    height: 30px;  
+    width: 100px;   
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px 0; /* Espacio entre los elementos */
+    margin: 10px 0; 
 }
+
 .folder-image {
     background-color: white;
+    height: 100px; 
+    width: 100px;  
+    object-fit: cover; 
 }
 
 .folder-footer {
     background-color: white;
+    font-size: 14px;
+    margin-top: 5px; 
 }
+
+
+

@@ -5,8 +5,8 @@ import ProjectListPage from "./components/project/pages/listPage/ProjectListPage
 import ProjectPageDetails from "./components/project/pages/detailsPage/ProjectDetailsPage";
 import MainMenu from "./components/menu/MainMenu";
 import MainHeader from "./components/header/MainHeader";
-import VerticalLink from "./components/contact/VerticalLink";
 import UserProfileDetails from './components/aboutMe/pages/ProfileDetails/UserProfileDetails';
+import VerticalLinkList from './components/contact/VerticalLinkList';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<ProjectListPage />} />
             <Route path="/sobre mi" element={<UserProfileDetails />} />
-            <Route path="/contacto" element={<VerticalLink />} />
+            <Route path="/contacto" element={<VerticalLinkList />} />
             <Route path="/details/:id" element={<ProjectPageDetails />} />
           </Routes>
         </div>

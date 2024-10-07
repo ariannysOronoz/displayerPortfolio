@@ -1,0 +1,5 @@
+.socialMediaLinks{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
