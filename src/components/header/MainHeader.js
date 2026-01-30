@@ -1,24 +1,29 @@
 import React from 'react';
-import HorizontalHeader from './HorizontalHeader';
-import './MainHeader.css';
-
+import { AppBar, Toolbar, Typography, Container, Box } from '@mui/material';
 
 
 export default function MainPage() {
-    const headerItems = [
-        { id: 1, 
-          title: 'Ariannys Oronoz'
-        } 
-    ];
-
     return (
-        <div className="Main-header-container">
-            {/* topo */}
-            <div className="header-list">
-                {headerItems.map(item => (
-                    <HorizontalHeader title={item.title} />
-                ))}
-            </div>
-        </div>
+        <AppBar position="sticky" sx={{ backgroundColor: 'white', color: 'black', boxShadow: 'none', borderBottom: '1px solid #e0e0e0' }}>
+            <Container maxWidth="lg">
+                <Toolbar sx={{ justifyContent: 'space-between', padding: '10px 0' }}>
+                  
+                    <Typography 
+                        variant="h6" 
+                        component="div" 
+                        sx={{ fontWeight: 'bold', color: '#6366f1', letterSpacing: '-1px' }}
+                    >
+                        Ariannys Oronoz
+                    </Typography>
+
+                    <Box sx={{ display: 'flex', gap: '20px' }}>
+                        <Typography sx={{ cursor: 'pointer', '&:hover': { color: '#6366f1' } }}>Proyectos</Typography>
+                        <Typography sx={{ cursor: 'pointer', '&:hover': { color: '#6366f1' } }}>Sobre mí</Typography>
+                        <Typography sx={{ cursor: 'pointer', '&:hover': { color: '#6366f1' } }}>Contacto</Typography>
+                    </Box>
+
+                </Toolbar>
+            </Container>
+        </AppBar>
     );
 };

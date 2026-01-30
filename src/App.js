@@ -7,9 +7,22 @@ import MainMenu from "./components/menu/MainMenu";
 import MainHeader from "./components/header/MainHeader";
 import UserProfileDetails from './components/aboutMe/pages/ProfileDetails/UserProfileDetails';
 import VerticalLinkList from './components/contact/VerticalLinkList';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 
 function App() {
+  const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#6366f1', 
+    },
+  },
+  typography: {
+    fontFamily: 'Inter, sans-serif',
+  },
+});
   return (
+    <ThemeProvider theme={theme}>
     <Router>
       <div className="App">
         <MainHeader />
@@ -24,6 +37,7 @@ function App() {
         </div>
       </div>
     </Router>
+    </ThemeProvider>
   );
 }
 
