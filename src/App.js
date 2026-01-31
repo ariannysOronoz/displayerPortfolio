@@ -23,7 +23,7 @@ function App() {
 });
   return (
     <ThemeProvider theme={theme}>
-    <Router basename="/displayerPortfolio">
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
         <MainHeader />
         <div className="app-main-container">
