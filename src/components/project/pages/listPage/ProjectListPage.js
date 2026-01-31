@@ -1,8 +1,8 @@
 import React from 'react';
-import { Grid2 } from '@mui/material';
+import { Grid2 as Grid, Container, Typography, Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import ProjectCard from "../../components/card/ProjectCard";
-import './ProjectListPage.css';
+
 
 export default function ProjectListPage() {
   const navigate = useNavigate();
@@ -56,10 +56,19 @@ export default function ProjectListPage() {
     navigate(`/details/${id}`);
   };
   return (
-    <div className="project-page-container">
-      <Grid2 container spacing={5}> 
+      <Container maxWidth="lg" sx={{ py: 5 }}>
+      <Box sx={{ mb: 4 }}>
+        <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 1 }}>
+          Mis Proyectos
+        </Typography>
+        <Typography color="text.secondary">
+          Explora mis trabajos más recientes
+        </Typography>
+      </Box>
+      
+      <Grid container spacing={5}> 
         {projectData.map((data) => (
-          <Grid2 
+          <Grid
             item 
             xs={12} sm={6} md={4}
             key={data.id} 
@@ -70,9 +79,9 @@ export default function ProjectListPage() {
               title={data.title}
               description={data.description}
             />
-          </Grid2>
+          </Grid>
         ))}
-      </Grid2>
-    </div>
+      </Grid>
+      </Container>
   );
 }
