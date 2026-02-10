@@ -4,7 +4,15 @@ import { AppBar, Toolbar, Typography, Container, Box } from '@mui/material';
 
 export default function MainPage() {
     return (
-        <AppBar position="sticky" sx={{ backgroundColor: 'white', color: 'black', boxShadow: 'none', borderBottom: '1px solid #e0e0e0' }}>
+        <AppBar position="sticky" 
+        sx={{ 
+            backgroundColor: 'rgba(255, 255, 255, 0.9)',
+            backdropFilter: 'blur(8px)', 
+            color: 'black', 
+            boxShadow: 'none', 
+            borderBottom: '1px solid #f1f5f9' 
+            }}
+        >
             <Container maxWidth="lg">
                 <Toolbar sx={{ justifyContent: 'space-between', padding: '10px 0' }}>
                   
