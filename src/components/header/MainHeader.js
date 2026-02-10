@@ -1,6 +1,6 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Container, Box } from '@mui/material';
-
+import { AppBar, Toolbar, Typography, Container, Box, Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export default function MainPage() {
     return (
@@ -18,16 +18,43 @@ export default function MainPage() {
                   
                     <Typography 
                         variant="h6" 
-                        component="div" 
-                        sx={{ fontWeight: 'bold', color: '#6366f1', letterSpacing: '-1px' }}
+                        component={Link}
+                        to="/" 
+                        sx={{ fontWeight: 'bold', color: '#6366f1', letterSpacing: '-1px' , textDecorationColor:'none'}}
                     >
                         Ariannys Oronoz
                     </Typography>
 
-                    <Box sx={{ display: 'flex', gap: '20px' }}>
-                        <Typography sx={{ cursor: 'pointer', '&:hover': { color: '#6366f1' } }}>Proyectos</Typography>
-                        <Typography sx={{ cursor: 'pointer', '&:hover': { color: '#6366f1' } }}>Sobre mí</Typography>
-                        <Typography sx={{ cursor: 'pointer', '&:hover': { color: '#6366f1' } }}>Contacto</Typography>
+                    <Box sx={{ display: 'flex', gap: '10px' }}>
+                        <Button 
+                            component={Link} 
+                            to="/" 
+                            sx={{ color: '#475569', textTransform: 'none', fontWeight: 500, '&:hover': { color: '#6366f1' } }}
+                        >
+                            Proyectos
+                        </Button>
+                        <Button 
+                            component={Link} 
+                            to="/sobre mi"
+                            sx={{ color: '#475569', textTransform: 'none', fontWeight: 500, '&:hover': { color: '#6366f1' } }}
+                        >
+                            Sobre mí
+                        </Button>
+                        <Button 
+                            variant="contained"
+                            component={Link} 
+                            to="/contacto" 
+                            sx={{ 
+                                backgroundColor: '#1e293b', 
+                                color: 'white', 
+                                textTransform: 'none', 
+                                borderRadius: '8px',
+                                ml: 1,
+                                '&:hover': { backgroundColor: '#475569' } 
+                            }}
+                        >
+                            Contacto
+                        </Button>
                     </Box>
 
                 </Toolbar>
