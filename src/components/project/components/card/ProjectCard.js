@@ -2,6 +2,8 @@ import React from 'react';
 import { Card, CardContent, CardMedia, Typography, CardActionArea, Box } from '@mui/material';
 
 export default function ProjectCard({ image, title, description }) {
+  const projectUrl = "https://ariannysoronoz.github.io/CatPhotoApp/";
+  const catAppImage = "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=800";
     return (
         <Card 
       sx={{ 
@@ -15,18 +17,30 @@ export default function ProjectCard({ image, title, description }) {
         },
       }}
     >
-      <CardActionArea sx={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+      <CardActionArea 
+      sx={{ 
+        height: '100%', 
+        display: 'flex', 
+        flexDirection: 'column', 
+        alignItems: 'stretch', 
+        }}
+        >
+
         {/* Contenedor de la imagen */}
-        <CardMedia
-          component="img"
-          height="180"
-          image={image || 'https://via.placeholder.com/400x200?text=Sin+Imagen'} 
-          alt={title}
-          sx={{ 
-            objectFit: 'cover',
-            backgroundColor: '#f1f5f9' 
-          }}
-        />
+        <Box sx={{ width: '100%', height: '200px', overflow: 'hidden' }}>
+          <img 
+            src={image && image.startsWith('http') ? image : catAppImage} 
+            alt={title}
+            style={{ 
+              width: '100%', 
+              height: '100%', 
+              objectFit: 'cover', // Esto hace que la imagen llene el recuadro sin deformarse
+              display: 'block'
+            }}
+            onError={(e) => { e.target.src = catAppImage; }}
+          />
+          </Box>
+        
 
         {/* Contenido de la tarjeta */}
         <CardContent sx={{ flexGrow: 1, width: '100%' }}>

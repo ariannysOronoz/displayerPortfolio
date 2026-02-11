@@ -2,19 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Container, Grid2, Typography, Button, Box, Paper, Divider } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import projectData from "../../projectData";
 
 export default function ProjectDetailsPage() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [project, setProject] = useState(null);
 
-  const projectData = [
-    { id: 1, image: 'https://via.placeholder.com/800x500', title: 'Projeto 1', description: 'Descrição detalhada do Projeto 1...' },
-    { id: 2, image: 'https://via.placeholder.com/800x500', title: 'Projeto 2', description: 'Descrição detalhada do Projeto 2...' },
-    { id: 3, image: 'https://via.placeholder.com/800x500', title: 'Projeto 3', description: 'Descrição detalhada do Projeto 3...' },
-    { id: 4, image: 'https://via.placeholder.com/800x500', title: 'Projeto 4', description: 'Descrição detalhada do Projeto 4...' },
-    { id: 5, image: 'https://via.placeholder.com/800x500', title: 'Projeto 5', description: 'Descrição detalhada do Projeto 5...' }
-  ];
 
   useEffect(() => {
     const foundProject = projectData.find(p => p.id === parseInt(id));
