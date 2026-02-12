@@ -4,6 +4,7 @@ import { Container, Grid2, Typography, Button, Box, Paper, Divider } from '@mui/
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import projectData from "../../projectData";
 import LaunchIcon from '@mui/icons-material/Launch';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 export default function ProjectDetailsPage() {
   const { id } = useParams();
@@ -54,15 +55,22 @@ export default function ProjectDetailsPage() {
               {project.description}
             </Typography>
 
-            <Box sx={{ mt: 'auto' }}>
-              <Typography variant="subtitle2" sx={{ fontWeight: 700, mb: 1, color: '#1e293b' }}>
+            <Typography variant="subtitle2" sx={{ fontWeight: 700, mb: 1, color: '#1e293b' }}>
                 Tecnologías utilizadas:
               </Typography>
               {/* Aquí podrías mapear chips de tecnologías más adelante */}
               <Typography variant="body2" color="text.secondary">
                 React • Material UI • React Router
               </Typography>
-              
+
+            <Box sx={{ 
+              mt: 'auto',
+              display:'flex',
+              gap:2,
+              flexWrap:'wrap',
+              pt:3 
+              }}>
+            {/* Botón Deploy*/}
               <Button 
               variant="contained" 
               href={project.deployUrl} 
@@ -81,6 +89,29 @@ export default function ProjectDetailsPage() {
             >
               Ver Proyecto en Vivo
             </Button>
+            
+            {/* Botón GitHub*/}
+            <Button 
+            variant="contained" 
+            href={project.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            startIcon={<GitHubIcon />}
+            sx={{ 
+              flex: 1,
+              minWidth: '180px',
+              py: 1.5, 
+              borderRadius: 3, 
+              bgcolor: '#6366f1', 
+              textTransform: 'none',
+              fontWeight: 700,
+              boxShadow: 'none',
+              '&:hover': { 
+                bgcolor: '#4f46e5',
+                boxShadow: '0 4px 12px rgba(99, 102, 241, 0.2)' 
+              }
+            }}>
+              </Button>
             </Box>
           </Box>
         </Grid2>
