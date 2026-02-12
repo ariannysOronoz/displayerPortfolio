@@ -3,7 +3,8 @@ const projectData = [
       id: 1, 
       image: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=800', 
       title: 'Cat Photo App', 
-      description: 'Cat Photo App' 
+      description: 'Cat Photo App',
+      deployUrl: 'https://ariannysoronoz.github.io/CatPhotoApp/' 
     },
     { 
     id: 2, 

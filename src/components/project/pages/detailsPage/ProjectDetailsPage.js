@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { Container, Grid2, Typography, Button, Box, Paper, Divider } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import projectData from "../../projectData";
+import LaunchIcon from '@mui/icons-material/Launch';
 
 export default function ProjectDetailsPage() {
   const { id } = useParams();
@@ -61,6 +62,25 @@ export default function ProjectDetailsPage() {
               <Typography variant="body2" color="text.secondary">
                 React • Material UI • React Router
               </Typography>
+              
+              <Button 
+              variant="contained" 
+              href={project.deployUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              endIcon={<LaunchIcon />}
+              sx={{ 
+                mt: 'auto', 
+                py: 1.5, 
+                borderRadius: 3, 
+                bgcolor: '#1e293b',
+                '&:hover': { bgcolor: '#6366f1' },
+                textTransform: 'none',
+                fontWeight: 700
+              }}
+            >
+              Ver Proyecto en Vivo
+            </Button>
             </Box>
           </Box>
         </Grid2>
